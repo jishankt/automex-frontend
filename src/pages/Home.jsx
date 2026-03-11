@@ -464,8 +464,8 @@ export default function Home() {
       .finally(() => setLoading(false))
   }, [])
 
-  if (loading) return <><div style={{minHeight:'100vh', background:'#0A0F1E'}} /><Spinner /></>
-  if (error)   return <ErrorState message={error} />
+  
+  // Always render with fallback data — API loads in background
 
   return (
     <>
